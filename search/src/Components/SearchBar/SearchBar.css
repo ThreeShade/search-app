@@ -6,10 +6,13 @@
   overflow: hidden;
 }
 .logo {
-  height: 150px;
+  height: 85%;
   padding: 30px 20px;
 }
 .logo-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 15%;
 }
 .search-div {
