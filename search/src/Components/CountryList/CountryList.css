@@ -4,3 +4,7 @@
   justify-content: center;
   margin-top: 25px;
 }
+.showing-count {
+  font-size: 20px;
+  text-align: center;
+}

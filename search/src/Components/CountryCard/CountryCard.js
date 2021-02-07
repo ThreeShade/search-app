@@ -1,12 +1,13 @@
-import { React } from 'react';
+import React from 'react';
 import './CountryCard.css';
 
 const CountryCard = (props) => {
-    console.log(props.countries.length)
+
+
 
     return (
         <>
-            <div className='country-card blurred-box'>
+            <div className='country-card blurred-box' onClick={() => { props.onClick(props.countries) }}>
                 <div className='card-row-one'>
                     <div className='flag'>
                         <img src={props.countries.flag} alt={props.countries.name} className='flag-img' />
@@ -24,5 +25,4 @@ const CountryCard = (props) => {
         </>
     )
 }
-
 export default CountryCard;
