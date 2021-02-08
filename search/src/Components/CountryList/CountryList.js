@@ -13,14 +13,22 @@ const CountryList = (props) => {
 
     function CountryModal(props) {
         return (
-            <Modal style={{ position: "fixed", top: "20px", bottom: "20px", left: "20px", right: "20px", backgroundColor: "white", color: "black" }}
+            <Modal className="country-modal"
                 {...props}
                 size="lg"
             >
-                <Modal.Body>
-                    <h4>{country.name}</h4>
+                <Modal.Body className="modal-body">
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                        <div className='modal-flag'><img src={country.flag} alt={country.name} className="img-n" /><h1>{country.name}</h1></div>
+                        <div className='content'><span className='text'>capital :</span><span className='desc'>{country.capital}</span></div>
+                        <div className='content'><span className='text'>population :</span><span className='desc'>{country.population}</span></div>
+                        <div className='content'><span className='text'>timezone :</span><span className='desc'>{country.timezones}&#9200;</span></div>
+                        <div className='content'><span className='text'>area :</span><span className='desc'>{country.area}&#65039;</span></div>
+                        <div className='content'><span className='text'>callingCodes :</span><span className='desc'>{country.callingCodes}&#x1f4f1;</span></div>
+                        <div className='content'><span className='text'>latlng :</span><span className='desc'>{country.latlng}	</span></div>
+                    </div>
                 </Modal.Body>
-                <Modal.Footer>
+                <Modal.Footer className="footer">
                     <button onClick={props.onHide}>Close</button>
                 </Modal.Footer>
             </Modal>
@@ -28,23 +36,18 @@ const CountryList = (props) => {
     }
 
     return (
-        < >
+        <React.Fragment>
             <div className='showing-count'> &#8987; Showing  {props.countries.length} Countries</div>
             <div className='country-list'>
                 {
                     props.countries.map((countries, index) => <CountryCard key={index} countries={countries} onClick={(country) => { setCountry(country); setShow(true) }} />)
                 }
-                {/* {country.name ? */}
-
-                <CountryModal
-                    show={show}
-                    onHide={() => setShow(false)}
-
-                />
-                {/* : null
-                    } */}
             </div>
-        </>
+            <CountryModal
+                show={show}
+                onHide={() => setShow(false)}
+            />
+        </React.Fragment>
     )
 }
 export default CountryList;

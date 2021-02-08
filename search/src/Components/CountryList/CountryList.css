@@ -8,3 +8,59 @@
   font-size: 20px;
   text-align: center;
 }
+.country-modal {
+  position: fixed;
+  top: 25px;
+  bottom: 25px;
+  right: 25px;
+  left: 25px;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 5%;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+}
+.modal-body {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.modal-body h1 {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  justify-content: center;
+  text-align: left;
+}
+.content {
+  padding: 10px 0;
+  text-align: center;
+}
+.desc {
+  font-size: 20px;
+  padding: 0 10px;
+  text-align: right;
+}
+.text {
+  text-transform: uppercase;
+  padding: 0 10px;
+  text-align: left;
+  font-size: 20px;
+}
+button {
+  color: white;
+  background-color: rgb(201, 128, 20);
+  height: 50px;
+  font-size: 20px;
+  width: 250px;
+}
+.modal-flag {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+.img-n {
+  width: 200px;
+  height: 100px;
+}
